@@ -38,7 +38,7 @@ export default function Home() {
             fontFamily: 'Georgia, "Times New Roman", Times, serif'
           }}
         >
-          Where iconic companies hire their best talent
+          Where we can hire the best talent
         </p>
       </div>
     </div>
