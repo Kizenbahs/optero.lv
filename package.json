@@ -2,11 +2,15 @@
   "name": "optero.lv",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "npm@10.0.0",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "turbo:build": "turbo build",
+    "turbo:dev": "turbo dev",
+    "turbo:lint": "turbo lint"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.3",
@@ -27,6 +31,7 @@
     "eslint": "^9",
     "eslint-config-next": "15.4.6",
     "tailwindcss": "^4",
+    "turbo": "^2.5.5",
     "tw-animate-css": "^1.3.6",
     "typescript": "^5"
   }
