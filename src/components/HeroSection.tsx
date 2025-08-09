@@ -37,7 +37,7 @@ export default function HeroSection() {
             filter: 'drop-shadow(0 0 3px rgba(255, 0, 0, 0.3))'
           }}
         >
-          OPTERO.LV
+          optero.lv
         </h1>
       </div>
       
