@@ -27,7 +27,7 @@ export default function HeroSection() {
         <h1 
           className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight animate-slide-in-left font-oswald"
           style={{ 
-            color: '#9899a6',
+            color: 'red',
             animationDelay: '0.4s'
           }}
         >
