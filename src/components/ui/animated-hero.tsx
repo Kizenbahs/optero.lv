@@ -2,8 +2,10 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
-import { MoveRight, PhoneCall } from "lucide-react";
+import { MoveRight, PhoneCall, ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Announcement, AnnouncementTitle } from "@/components/ui/announcement";
+import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
 
 function Hero() {
   const [titleNumber, setTitleNumber] = useState(0);
@@ -28,9 +30,12 @@ function Hero() {
       <div className="w-full px-4 sm:px-6 md:container md:mx-auto">
         <div className="flex gap-6 md:gap-8 py-6 md:py-8 lg:py-12 items-center justify-center flex-col">
           <div>
-            <Button variant="secondary" size="sm" className="gap-2 md:gap-4 text-sm md:text-base">
-              Drīzumā šeit būs<MoveRight className="w-3 h-3 md:w-4 md:h-4" />
-            </Button>
+            <Announcement>
+              <AnnouncementTitle>
+                Drīzumā šeit būs
+                <ArrowDown size={16} className="shrink-0 text-muted-foreground" />
+              </AnnouncementTitle>
+            </Announcement>
           </div>
           <div className="flex gap-3 md:gap-4 flex-col">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl max-w-sm sm:max-w-md md:max-w-2xl tracking-tighter text-center font-regular">
@@ -62,16 +67,24 @@ function Hero() {
             </h1>
 
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed tracking-tight text-muted-foreground w-full max-w-sm sm:max-w-md md:max-w-xl lg:max-w-2xl text-center">
-            Mūsu platforma būs droša vieta, kur satikt uzticamus profesionāļus un atrast vajadzīgos pakalpojumus. Pakalpojumu sniedzēji varēs viegli publicēt piedāvājumus, lietotāji – salīdzināt un izvēlēties labāko. Būs iespēja ērti sazināties tieši portālā.
+            Mūsu platforma būs vieta, kur atrast uzticamus profesionāļus un atrast vajadzīgos pakalpojumus. Pakalpojumu sniedzēji varēs viegli publicēt piedāvājumus, lietotāji – salīdzināt un izvēlēties labāko. Būs iespēja ērti sazināties tieši portālā.
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full max-w-sm sm:max-w-none sm:justify-center">
-            <Button size="lg" className="gap-3 text-base sm:text-lg py-4 sm:py-2 px-6 sm:px-4 h-auto sm:h-10 w-full sm:w-auto" variant="outline">
-              <span className="hidden sm:inline">Jautājumi? </span>+371 20 036 477 <PhoneCall className="w-4 h-4" />
-            </Button>
-            <Button size="lg" className="gap-3 text-base sm:text-lg py-4 sm:py-2 px-6 sm:px-4 h-auto sm:h-10 w-full sm:w-auto">
-              info@optero.lv <MoveRight className="w-4 h-4" />
-            </Button>
+            <a href="tel:+37120036477">
+              <Announcement className="w-full sm:w-auto cursor-pointer hover:bg-accent/50 justify-center sm:justify-start" variant="outline">
+                <AnnouncementTitle>
+                  <span className="hidden sm:inline">Jautājumi? Zvani:</span>+371 20 036 477 
+                  <PhoneCall size={16} className="shrink-0 text-muted-foreground" />
+                </AnnouncementTitle>
+              </Announcement>
+            </a>
+            <Announcement className="w-full sm:w-auto cursor-pointer bg-primary text-primary-foreground border-primary hover:bg-background hover:text-primary hover:border-primary transition-colors justify-center sm:justify-start" variant="default">
+              <AnnouncementTitle>
+                info@optero.lv 
+                <MoveRight size={16} className="shrink-0 text-primary-foreground transition-colors" />
+              </AnnouncementTitle>
+            </Announcement>
           </div>
         </div>
       </div>
