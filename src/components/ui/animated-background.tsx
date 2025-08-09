@@ -13,7 +13,7 @@ interface Dot {
 export function AnimatedBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const dotsRef = useRef<Dot[]>([]);
-  const animationFrameRef = useRef<number>();
+  const animationFrameRef = useRef<number | undefined>();
 
   useEffect(() => {
     const canvas = canvasRef.current;
