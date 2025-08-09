@@ -28,19 +28,19 @@ function Hero() {
       <div className="w-full px-4 sm:px-6 md:container md:mx-auto">
         <div className="flex gap-6 md:gap-8 py-6 md:py-8 lg:py-12 items-center justify-center flex-col">
           <div>
-            <Button variant="secondary" size="sm" className="gap-2 md:gap-4 text-xs md:text-sm">
+            <Button variant="secondary" size="sm" className="gap-2 md:gap-4 text-sm md:text-base">
               Drīzumā šeit būs<MoveRight className="w-3 h-3 md:w-4 md:h-4" />
             </Button>
           </div>
           <div className="flex gap-3 md:gap-4 flex-col">
-            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl max-w-xs sm:max-w-md md:max-w-2xl tracking-tighter text-center font-regular">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl max-w-sm sm:max-w-md md:max-w-2xl tracking-tighter text-center font-regular">
               <span className="text-foreground">OPTERO.LV</span>
               <span className="relative flex w-full justify-center overflow-hidden text-center md:pb-4 md:pt-1">
                 &nbsp;
                 {titles.map((title, index) => (
                   <motion.span
                     key={index}
-                    className="absolute font-semibold text-foreground text-2xl sm:text-3xl md:text-5xl lg:text-6xl"
+                    className="absolute font-semibold text-foreground text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
                     initial={{ opacity: 0, y: "-100" }}
                     transition={{ type: "spring", stiffness: 50 }}
                     animate={
@@ -61,16 +61,16 @@ function Hero() {
               </span>
             </h1>
 
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed tracking-tight text-muted-foreground w-full max-w-xs sm:max-w-sm md:max-w-xl lg:max-w-2xl text-center">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed tracking-tight text-muted-foreground w-full max-w-sm sm:max-w-md md:max-w-xl lg:max-w-2xl text-center">
             Mūsu platforma būs droša vieta, kur satikt uzticamus profesionāļus un atrast vajadzīgos pakalpojumus. Pakalpojumu sniedzēji varēs viegli publicēt piedāvājumus, lietotāji – salīdzināt un izvēlēties labāko. Būs iespēja ērti sazināties tieši portālā.
             </p>
           </div>
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full max-w-xs sm:max-w-none">
-            <Button size="sm" className="gap-2 text-xs sm:text-sm flex-1 sm:flex-none" variant="outline">
-              <span className="hidden sm:inline">Jautājumi? </span>+371 20 036 477 <PhoneCall className="w-3 h-3 sm:w-4 sm:h-4" />
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full max-w-sm sm:max-w-none sm:justify-center">
+            <Button size="lg" className="gap-3 text-base sm:text-lg py-4 sm:py-2 px-6 sm:px-4 h-auto sm:h-10 w-full sm:w-auto" variant="outline">
+              <span className="hidden sm:inline">Jautājumi? </span>+371 20 036 477 <PhoneCall className="w-4 h-4" />
             </Button>
-            <Button size="sm" className="gap-2 text-xs sm:text-sm flex-1 sm:flex-none">
-              info@optero.lv <MoveRight className="w-3 h-3 sm:w-4 sm:h-4" />
+            <Button size="lg" className="gap-3 text-base sm:text-lg py-4 sm:py-2 px-6 sm:px-4 h-auto sm:h-10 w-full sm:w-auto">
+              info@optero.lv <MoveRight className="w-4 h-4" />
             </Button>
           </div>
         </div>
