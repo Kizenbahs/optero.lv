@@ -10,7 +10,7 @@ import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button
 function Hero() {
   const [titleNumber, setTitleNumber] = useState(0);
   const titles = useMemo(
-    () => ["profesionāļi", "speciālisti", "meistari", "ieteikumi", "chat", "atsauksmes"],
+    () => ["profesionāļi", "speciālisti", "meistari", "ieteikumi", "chat", "atsauksmes", "kuponi", "akcijas"],
     []
   );
 
