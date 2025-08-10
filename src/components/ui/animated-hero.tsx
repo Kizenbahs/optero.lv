@@ -2,10 +2,9 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
-import { MoveRight, PhoneCall, ArrowDown } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { PhoneCall, ArrowDown } from "lucide-react";
+import { RiWhatsappFill, RiTelegramFill } from "react-icons/ri";
 import { Announcement, AnnouncementTitle } from "@/components/ui/announcement";
-import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
 
 function Hero() {
   const [titleNumber, setTitleNumber] = useState(0);
@@ -67,24 +66,19 @@ function Hero() {
             </h1>
 
             <p className="text-lx font-normal leading-relaxed tracking-tight text-foreground w-full max-w-sm sm:max-w-md md:max-w-xl lg:max-w-2xl text-center">
-            Mūsu platforma būs vieta, kur atrast uzticamus profesionāļus un atrast vajadzīgos pakalpojumus. Pakalpojumu sniedzēji varēs viegli publicēt piedāvājumus, lietotāji – salīdzināt un izvēlēties labāko. Būs iespēja ērti sazināties tieši portālā.
+            Mūsu platforma būs vieta, kur atrast uzticamus profesionāļus un atrast vajadzīgos pakalpojumus. Pakalpojumu sniedzēji varēs viegli publicēt piedāvājumus, lietotāji – salīdzināt un izvēlēties labāko. Būs iespēja ērti sazināties tieši portālā. Par informācijas izvietošanu vai sadarbību, sazinies ar mums:
             </p>
           </div>
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full max-w-sm sm:max-w-none sm:justify-center">
-                        <a href="tel:+37120036477">
-              <Announcement className="w-full sm:w-auto cursor-pointer bg-[#04724d] text-white hover:bg-[#04724d]/80 justify-center sm:justify-start" variant="outline">
-                <AnnouncementTitle>
-                  <span className="inline">Jautājumi? Zvani:</span>+371 20 036 477 
-                  <PhoneCall size={16} className="shrink-0 text-white" />
-                </AnnouncementTitle>
-              </Announcement>
-            </a>
-            <Announcement className="w-full sm:w-auto cursor-pointer bg-black text-white hover:bg-black/80 transition-colors justify-center sm:justify-start" variant="outline">
-              <AnnouncementTitle>
-                info@optero.lv 
-                <MoveRight size={16} className="shrink-0 text-white transition-colors" />
-              </AnnouncementTitle>
-            </Announcement>
+                     <div className="flex flex-row gap-3 sm:gap-4 w-full max-w-sm sm:max-w-none justify-center">
+                                                  <a href="tel:+37120036477">
+               <PhoneCall size={22} className="shrink-0 text-gray-500 hover:text-gray-400 cursor-pointer transition-colors" />
+             </a>
+             <a href="https://wa.me/37120036477" target="_blank" rel="noopener noreferrer">
+               <RiWhatsappFill size={24} className="shrink-0 text-gray-500 hover:text-gray-400 cursor-pointer transition-colors" />
+             </a>
+             <a href="https://t.me/GiXRP" target="_blank" rel="noopener noreferrer">
+               <RiTelegramFill size={24} className="shrink-0 text-gray-500 hover:text-gray-400 cursor-pointer transition-colors" />
+             </a>
           </div>
         </div>
       </div>
