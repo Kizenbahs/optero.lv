@@ -43,25 +43,25 @@ function Hero() {
               <span className="relative flex w-full justify-center overflow-hidden text-center md:pb-4 md:pt-1">
                 &nbsp;
                 {titles.map((title, index) => (
-                  <motion.span
-                    key={index}
-                    className="absolute font-semibold text-foreground text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
-                    initial={{ opacity: 0, y: "-100" }}
-                    transition={{ type: "spring", stiffness: 50 }}
-                    animate={
-                      titleNumber === index
-                        ? {
-                            y: 0,
-                            opacity: 1,
-                          }
-                        : {
-                            y: titleNumber > index ? -150 : 150,
-                            opacity: 0,
-                          }
-                    }
-                  >
-                    {title}
-                  </motion.span>
+                                     <motion.span
+                     key={index}
+                                           className="absolute font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-gray-500"
+                     initial={{ opacity: 0, y: "-100" }}
+                     transition={{ type: "spring", stiffness: 50 }}
+                     animate={
+                       titleNumber === index
+                         ? {
+                             y: 0,
+                             opacity: 1,
+                           }
+                         : {
+                             y: titleNumber > index ? -150 : 150,
+                             opacity: 0,
+                           }
+                     }
+                   >
+                     {title}
+                   </motion.span>
                 ))}
               </span>
             </h1>
@@ -71,18 +71,18 @@ function Hero() {
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full max-w-sm sm:max-w-none sm:justify-center">
-            <a href="tel:+37120036477">
-              <Announcement className="w-full sm:w-auto cursor-pointer hover:bg-accent/50 justify-center sm:justify-start" variant="outline">
+                        <a href="tel:+37120036477">
+              <Announcement className="w-full sm:w-auto cursor-pointer bg-[#04724d] text-white hover:bg-[#04724d]/80 justify-center sm:justify-start" variant="outline">
                 <AnnouncementTitle>
-                                     <span className="inline">Jautājumi? Zvani:</span>+371 20 036 477 
-                  <PhoneCall size={16} className="shrink-0 text-muted-foreground" />
+                  <span className="inline">Jautājumi? Zvani:</span>+371 20 036 477 
+                  <PhoneCall size={16} className="shrink-0 text-white" />
                 </AnnouncementTitle>
               </Announcement>
             </a>
-            <Announcement className="w-full sm:w-auto cursor-pointer bg-primary text-primary-foreground border-primary hover:bg-background hover:text-primary hover:border-primary transition-colors justify-center sm:justify-start" variant="default">
+            <Announcement className="w-full sm:w-auto cursor-pointer bg-black text-white hover:bg-black/80 transition-colors justify-center sm:justify-start" variant="outline">
               <AnnouncementTitle>
                 info@optero.lv 
-                <MoveRight size={16} className="shrink-0 text-primary-foreground transition-colors" />
+                <MoveRight size={16} className="shrink-0 text-white transition-colors" />
               </AnnouncementTitle>
             </Announcement>
           </div>
