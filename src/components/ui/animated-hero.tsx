@@ -32,14 +32,14 @@ function Hero() {
           <div>
             <Announcement>
               <AnnouncementTitle>
-                Drīzumā šeit būs
+                Drīzumā šeit būs jauns portāls
                 <ArrowDown size={16} className="shrink-0 text-muted-foreground" />
               </AnnouncementTitle>
             </Announcement>
           </div>
           <div className="flex gap-3 md:gap-4 flex-col">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl max-w-sm sm:max-w-md md:max-w-2xl tracking-tighter text-center font-regular">
-              <span className="text-foreground">OPTERO.LV</span>
+              <span className="text-foreground font-cal lowercase drop-shadow-[0_0_30px_rgba(255,255,255,0.5)] drop-shadow-[0_0_60px_rgba(255,255,255,0.3)]">optero.lv</span>
               <span className="relative flex w-full justify-center overflow-hidden text-center md:pb-4 md:pt-1">
                 &nbsp;
                 {titles.map((title, index) => (
@@ -66,7 +66,7 @@ function Hero() {
               </span>
             </h1>
 
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed tracking-tight text-muted-foreground w-full max-w-sm sm:max-w-md md:max-w-xl lg:max-w-2xl text-center">
+            <p className="text-lx font-normal leading-relaxed tracking-tight text-foreground w-full max-w-sm sm:max-w-md md:max-w-xl lg:max-w-2xl text-center">
             Mūsu platforma būs vieta, kur atrast uzticamus profesionāļus un atrast vajadzīgos pakalpojumus. Pakalpojumu sniedzēji varēs viegli publicēt piedāvājumus, lietotāji – salīdzināt un izvēlēties labāko. Būs iespēja ērti sazināties tieši portālā.
             </p>
           </div>
@@ -74,7 +74,7 @@ function Hero() {
             <a href="tel:+37120036477">
               <Announcement className="w-full sm:w-auto cursor-pointer hover:bg-accent/50 justify-center sm:justify-start" variant="outline">
                 <AnnouncementTitle>
-                  <span className="hidden sm:inline">Jautājumi? Zvani:</span>+371 20 036 477 
+                                     <span className="inline">Jautājumi? Zvani:</span>+371 20 036 477 
                   <PhoneCall size={16} className="shrink-0 text-muted-foreground" />
                 </AnnouncementTitle>
               </Announcement>
